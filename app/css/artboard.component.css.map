@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,mBAAmB;EACjB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,IAAI;EACX,cAAc,EAAE,MAAM;EACtB,gBAAgB,EAAE,mCAAmC;EACrD,QAAQ,EAAE,QAAQ;EAClB,6BAAS;IACP,aAAa,EAAE,GAAG;IAClB,MAAM,EAAE,IAAI;IACZ,KAAK,EAAE,IAAI;IACX,gBAAgB,EAAE,KAAK;IACvB,UAAU,EAAE,mBAAmB;IAC/B,UAAU,EAAE,OAAO;EAErB,mCAAe;IACb,SAAS,EAAE,WAAW",
+"sources": ["artboard.component.scss"],
+"names": [],
+"file": "artboard.component.css"
+}

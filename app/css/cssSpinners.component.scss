@@ -1,0 +1,184 @@
+//container for the loading examples
+#cssSpinners-container{
+  background-color: #eee;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .artboard-title{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    h3{
+
+    }
+  }
+
+  .artboard-description{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    p{
+
+    }
+  }
+
+  // Makes the target spin clockwise
+  .spinner{
+    animation: spin 800ms linear infinite;
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  //gives div the properties of a circle with its contents centered
+  .circle{
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  #loading_spin_center{
+
+  }
+  #loading_spin_orbit{
+    #child2{
+      height: 1em;
+      width: 1em;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: auto;
+    }
+  }
+  #loading_bouncing{
+    margin: auto;
+    height: 5em;
+    width: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .child_bounce{
+      display: inline-block;;
+      height: .7em;
+      width: .7em;
+      margin: auto;
+      background-color: black;
+      border-radius: 50%;
+    }
+    .child_bounce:nth-child(1){
+      animation: bounce 900ms ease-in-out infinite;
+      @keyframes bounce{
+        0% {
+          transform: translateY(0em);
+        }
+        50% {
+          transform: translateY(2.5em);
+        }
+        100% {
+          transform: translateY(0em);
+        }
+      }
+    }
+    .child_bounce:nth-child(2){
+      animation: bounce 900ms ease-in-out 400ms infinite;
+      @keyframes bounce{
+        0% {
+          transform: translateY(0em);
+        }
+        50% {
+          transform: translateY(2.5em);
+        }
+        100% {
+          transform: translateY(0em);
+        }
+      }
+    }
+    .child_bounce:nth-child(3){
+      animation: bounce 900ms ease-in-out 200ms infinite;
+      @keyframes bounce{
+        0% {
+          transform: translateY(0em);
+        }
+        50% {
+          transform: translateY(2.5em);
+        }
+        100% {
+          transform: translateY(0em);
+        }
+      }
+    }
+  }
+  #loading_movement{
+    height: 5em;
+    width: 5em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    #child_container{
+      position: relative;
+      .child_move{
+        height: .5em;
+        width: .5em;
+        background-color: orange;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        opacity: 0;
+      }
+      .child_move:nth-child(1){
+        animation: move 1000ms linear 333ms infinite;
+        @keyframes move{
+          0% {
+            transform: translate(0,0);
+            opacity: 0;
+          }
+          100% {
+            transform: translate(5em, 0);
+            opacity: 1;
+          }
+        }
+      }
+      .child_move:nth-child(2){
+        animation: move 1000ms linear 666ms infinite;
+        @keyframes move{
+          0% {
+            transform: translate(0,0);
+            opacity: 0;
+          }
+          100% {
+            transform: translate(5em, 0);
+            opacity: 1;
+          }
+        }
+      }
+      .child_move:nth-child(3){
+        animation: move 1000ms linear 999ms infinite;
+        @keyframes move{
+          0% {
+            transform: translate(0,0);
+            opacity: 0;
+          }
+          100% {
+            transform: translate(5em, 0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

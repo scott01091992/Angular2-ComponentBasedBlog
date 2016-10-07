@@ -1,0 +1,138 @@
+#cssShapes-container{
+  position: relative;
+  background-color: #eee;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  perspective: 1000px;
+  perspective-origin: 50% 100px;
+  .artboard-title{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    h3{
+
+    }
+  }
+  .artboard-description{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    p{
+      
+    }
+  }
+}
+.cube{
+  position: relative;
+  margin: auto;
+  height: 5em;
+  width: 5em;
+  transform-style: preserve-3d;
+}
+.cube_face{
+  position: absolute;
+  height: 5em;
+  width: 5em;
+  background:rgba(255,255,255,0.1);
+  box-shadow:inset 0 0 30px;
+}
+.cube_front{
+  transform: translateZ(2.5em);
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+.cube_back{
+  transform: translateZ(-2.5em) rotateY(180deg);
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+.cube_left{
+  transform: rotateY(270deg) translateX(-2.5em);
+	transform-origin: center left;
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+.cube_right{
+  transform: rotateY(-270deg) translateX(2.5em);
+	transform-origin: top right;
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+.cube_top{
+  transform: rotateX(-90deg) translateY(-2.5em);
+	transform-origin: top center;
+}
+.cube_bottom{
+  transform: rotateX(90deg) translateY(2.5em);
+	transform-origin: bottom center;
+}
+#cube_rotate_clockwise{
+  animation: spin-clockwise 5s linear infinite;
+  @keyframes spin-clockwise{
+    from {transform: rotateY(0);}
+    to {transform: rotateY(360deg);}
+  }
+}
+#cube_rotate_counter-clockwise{
+  animation: spin-counter-clockwise 5s linear infinite;
+  @keyframes spin-counter-clockwise{
+    from {transform: rotateY(360deg);}
+    to {transform: rotateY(0deg);}
+  }
+}
+#cube_bounce{
+  animation: bouncing_block 3s linear infinite;
+  @keyframes bouncing_block{
+    0%{
+        transform: translate(0, -10em) rotateY(0deg) rotate(-15deg);
+    }
+    5%{
+      transform: translate(0, -10em) rotateY(0deg) rotate(-15deg);
+    }
+    15%{
+      transform: translate(0,0) rotateY(0deg) rotate(-8deg);
+    }
+    22%{
+      transform: translate(0, -3em) rotateY(10deg) rotate(-7deg);
+    }
+    30%{
+      transform: translate(0, 0) rotateY(12deg) rotate(-5deg);
+    }
+    33%{
+      transform: translate(0, -1em) rotateY(13deg) rotate(-2deg);
+    }
+    37%{
+      transform: translate(0, 0) rotateY(13deg);
+    }
+    39%{
+      transform: translate(0, -.5em) rotateY(13deg);
+    }
+    40%{
+      transform: translate(0, 0) rotateY(13deg);
+    }
+    100%{
+      transform: translate(0,0) rotateY(13deg);
+    }
+  }
+}
+#cube_grow{
+  animation: grow 5s linear infinite;
+  @keyframes grow{
+    0% {transform: scale(0);}
+    50% {transform: scale(1);}
+    100% {transform: scale(0);}
+  }
+}
+
+#cube_slide{
+  animation: slide 2s ease-in infinite;
+  @keyframes slide{
+    0%{
+      transform: translate(-20em, 0);
+    }
+    100%{
+      transform: translate(20em, 0);
+    }
+  }
+}

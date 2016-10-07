@@ -1,0 +1,18 @@
+#artboard-container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-image: url('./app/css/assets/checker.svg');
+  position: relative;
+  .artboard{
+    margin-bottom: 4em;
+    height: 30em;
+    width: auto;
+    background-color: white;
+    box-shadow: 0 0 .5em .1em black;
+    transition: all .3s;
+  }
+  .artboard:hover{
+    transform: scale(1.02);
+  }
+}
